@@ -4,11 +4,13 @@ package edu.uoc.ds.adt;
 import edu.uoc.ds.adt.sequential.Queue;
 import edu.uoc.ds.adt.sequential.QueueArrayImpl;
 
+import static edu.uoc.ds.adt.util.PeriodicFn.LEN;
+
 public class PR1Queue {
 
-    public final int CAPACITY = 10;
+    public final int CAPACITY = LEN;
 
-    private Queue<Character> queue;
+    private Queue<Integer> queue;
 
     public PR1Queue() {
         newQueue();
@@ -17,15 +19,15 @@ public class PR1Queue {
         queue = new QueueArrayImpl<>(CAPACITY);
     }
 
-    public Queue<Character> getQueue() {
+    public Queue<Integer> getQueue() {
         return this.queue;
     }
 
-    public void add(Character c) {
-        this.queue.add(c);
+    public void add(Integer n) {
+        this.queue.add(n);
     }
 
-    public Character poll() {
+    public Integer poll() {
         return this.queue.poll();
     }
 }

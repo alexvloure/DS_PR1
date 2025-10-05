@@ -4,28 +4,30 @@ package edu.uoc.ds.adt;
 import edu.uoc.ds.adt.sequential.Stack;
 import edu.uoc.ds.adt.sequential.StackArrayImpl;
 
-public class PR1Stack {
-    public final int CAPACITY = 10;
+import static edu.uoc.ds.adt.util.PeriodicFn.LEN;
 
-    private Stack<Character> stack;
+public class PR1Stack {
+    public final int CAPACITY = LEN;
+
+    private Stack<Integer> stack;
 
     public PR1Stack() {
         newStack();
     }
 
     public void newStack() {
-        stack = new StackArrayImpl<Character>(CAPACITY);
+        stack = new StackArrayImpl<Integer>(CAPACITY);
     }
 
-    public Stack<Character> getStack() {
+    public Stack<Integer> getStack() {
         return this.stack;
     }
 
-    public void push(Character c) {
-        this.stack.push(c);
+    public void push(Integer n) {
+        this.stack.push(n);
     }
 
-    public Character pop() {
+    public Integer pop() {
         return this.stack.pop();
     }
 }
